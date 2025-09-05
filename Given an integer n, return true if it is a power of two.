@@ -1,0 +1,23 @@
+#include <stdio.h>
+int main() {
+    int n, i, power = 1;
+    int isPower = 0; 
+    printf("Enter a number: ");
+    scanf("%d", &n);
+    if (n <= 0) {
+        printf("%d is NOT a power of two\n", n);
+        return 0;
+    }
+    for (i = 0; power <= n; i++) {
+        if (power == n) {
+            isPower = 1; 
+            break;
+        }
+        power = power * 2;
+    }
+    if (isPower == 1)
+        printf("%d is a power of two\n", n);
+    else
+        printf("%d is NOT a power of two\n", n);
+    return 0;
+}
